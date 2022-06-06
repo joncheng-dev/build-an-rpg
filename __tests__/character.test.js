@@ -7,4 +7,8 @@ describe("Character", () => {
     expect(charCreated.dex).toEqual(20);
     expect(charCreated.int).toEqual(11);
   });
+  test("should correctly determine the character type depending on the highest attribute - here, dex is highest meaning Rogue", () => {
+    const charCreated = new Character(9, 20, 11);
+    expect(charCreated.determineClass()).toEqual("Rogue");
+  });
 });
