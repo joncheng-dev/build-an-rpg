@@ -11,4 +11,8 @@ describe("Character", () => {
     const charCreated = new Character(9, 20, 11);
     expect(charCreated.determineClass()).toEqual("Rogue");
   });
+  test("should correctly determine the character type depending on the highest attribute - here, int is highest meaning Caster", () => {
+    const charCreated = new Character(11, 12, 15);
+    expect(charCreated.determineClass()).toEqual("Caster");
+  });
 });
