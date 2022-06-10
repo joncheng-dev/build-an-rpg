@@ -15,4 +15,12 @@ describe("Character", () => {
     const charCreated = new Character(11, 12, 15);
     expect(charCreated.determineClass()).toEqual("Caster");
   });
+  test("should correctly determine the character type depending on the highest attribute - here, str is the highest meaning Tank", () => {
+    const charCreated = new Character(18, 10, 13);
+    expect(charCreated.determineClass()).toEqual("Tank");
+  });
+  test("should correctly determine the character type depending on the highest attribute - here, no one attribute is highest, so Unidentified", () => {
+    const charCreated = new Character(15, 15, 13);
+    expect(charCreated.determineClass()).toEqual("Unidentified");
+  });
 });
