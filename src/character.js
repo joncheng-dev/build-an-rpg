@@ -12,7 +12,7 @@ export default class Character {
     } else if (this.int > this.str && this.int > this.dex) {
       return "Caster";
     } else {
-      return "Unidentified";
+      return "Undetermined";
     }
   }
 }
